@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project D - Extension</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js')}}" data-turbolinks-track="reload"></script>
+    <script src="{{ url_for('static', filename='table.js')}}" data-turbolinks-track="reload"></script>
+    <script src="{{ url_for('static', filename='d3.js')}}" data-turbolinks-track="reload"></script>
+    <link rel="stylesheet" media="all" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body class="vsc-initialized">
+<div id="header">
+    <h2 style="text-align:left;">Model Performace Monitoring Detailed Dashboard</h2>
+</div>
+<div id="div0">
+    <label>From Date: </label><input id="filter0" type="date"/>
+    <label style="margin-left:10px;">To Date: </label><input id="filter1" type="date"/>
+    <label>Execution Type<select id="filter2"><option selected>Select All</option></select></label>
+    <label>Success Status<select id="filter3"><option selected>Select All</option></select></label>
+    <label>Service Type<select id="filter4"><option selected>Select All</option></select></label>
+    <button id="reset" type="button">Reset</button>
+</div>
+<div id="div1"
+     style="border:2px solid #B8B7B7;">
+    <h2 style="color:red;">Total No of Score</h2>
+    <div>
+        <h1><span id="total"></span></h1>
+    </div>
+</div>
+<div id="div2"
+     style="border:2px solid #B8B7B7;">
+    <h2 style="color:red;">Execution Status for Training</h2>
+    <div>
+        <h2>Success: <span id="training_success"></span> | Failure: <span id="training_failure"></span></h2>
+    </div>
+</div>
+<div id="div3"
+     style="border:2px solid #B8B7B7;">
+    <h2 style="color:red;">Total No of Score in Selected Period</h2>
+    <div>
+        <h1><span id="total_selected"></span></h1>
+    </div>
+</div>
+<div id="div4"
+     style="border:2px solid #B8B7B7;">
+    <h2 style="color:red;">Execution Status for Prediction</h2>
+    <div>
+        <h2>Success: <span id="production_success"></span> | Failure: <span id="production_failure"></span></h2>
+    </div>
+</div>
+<div id="div5">
+    <h3>Model Runwise Report</h3>
+</div>
+<div id="div6">
+    <table id="table11" style="font-size:13px;">
+        <thead>
+        <tr>
+            <th>Model Id</th>
+            <th>Model Run Date</th>
+            <th>Model Name</th>
+            <th>Execution Type</th>
+            <th>URL</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in items %}
+        <tr>
+            <td style="width:80px;">{{item[0]}}</td>
+            <td style="width:150px;">{{item[2]}}</td>
+            <td style="width:150px;">{{item[1]}}</td>
+            <td style="width:120px;">{{item[4]}}</td>
+            <td><a href={{item[7]}}>See Report</a></td>
+            <td style="width:120px;display:none;">{{item[3]}}</td>
+            <td style="width:120px;display:none;">{{item[5]}}</td>
+            <td style="width:120px;display:none;">{{item[6]}}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<div id="div7">
+    <button style="height:50px; width:500px; background-color:#ED9521; color:white;">Model Performance Monitoring Detailed Dashboard
+    </button>
+</div>
+</body>
+</html>
