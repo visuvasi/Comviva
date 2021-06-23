@@ -1,0 +1,126 @@
+h3{
+    color: red;
+    text-align: left;
+}
+th{
+    color:red;
+
+}
+div{
+    text-align:center;
+    border: "3"
+}
+body{
+    background-color: #F1EEEE;
+
+}
+#div0{
+    margin-top:14px;
+    margin-bottom:20px;
+    padding:2px;
+}
+#div1{
+    height:113px;
+    width:665px;
+    background-color:white;
+    margin-top:30px;
+    text-align:center;
+}
+#div2{
+    height:113px;
+    width:665px;
+    background-color:white;
+    position:relative;
+    right:-672px;
+    bottom:117px;
+    text-align:center;
+}
+#div3{
+    height:113px;
+    width:665px;
+    background-color:white;
+    position:relative;
+    margin-top:-112.5px;
+    text-align:center;
+}
+#div4{
+    height:113px;
+    width:665px;
+    background-color:white;
+    position:relative;
+    right:-672px;
+    bottom:117px;
+    text-align:center;
+}
+#div5{
+    height:250px;
+    width:665px;
+    margin-top:-100px;
+}
+#div6{
+    height:227px;
+    width:665px;
+    background-color:white;
+    position:relative;
+    margin-top:-220px;
+    overflow:scroll;
+
+}
+#div7{
+    width:665px;
+    position:relative;
+    right:-672px;
+    bottom:150px;
+}
+table{
+    font-family: arial, sans-serif;
+    font-size:2;
+    border-collapse: collapse;
+    width: 100%;
+    border: "3";
+}
+td,th{
+    height:20px;
+    border: 1px solid #AFAFAF;
+    text-align: left;
+    padding: 1px;
+
+}
+select{
+  height: 20px;
+  width: 300px;
+  padding-left: 4px;
+}
+#header{
+    background-color: black;
+    height:50px;
+    width:1320px;
+    color:white;
+}
+#filter0{
+    width:150px;
+    height:16px;
+}
+#filter1{
+    width:150px;
+    height:16px;
+    margin-right:10px;
+}
+#filter2{
+    margin-left:5px;
+    margin-right:10px;
+    width:150px;
+    height:20px;
+}
+#filter3{
+    margin-left:5px;
+    margin-right:10px;
+    width:150px;
+    height:20px;
+}
+#filter4{
+    margin-left:5px;
+    margin-right:10px;
+    width:150px;
+    height:20px;
+}
